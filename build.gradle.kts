@@ -25,6 +25,12 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.springframework.ai:spring-ai-starter-model-openai")
+
+	// Logging (kotlin-logging은 내부적으로 SLF4J를 사용하기 때문에 SLF4J API, SLF4J 구현체가 모두 있어야 로그가 정상적으로 출력된다)
+	implementation("io.github.microutils:kotlin-logging-jvm:2.0.10")
+	implementation("org.slf4j:slf4j-api:2.0.17")
+	implementation("ch.qos.logback:logback-classic:1.5.18")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
